@@ -21,6 +21,8 @@ int main()
 {
 	client c;
 
+	c.subscribe(nullptr, "Hello world");
+
 	c.loop_forever();
 
 	return 0;
