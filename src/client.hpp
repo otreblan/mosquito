@@ -14,14 +14,14 @@
 // You should have received a copy of the GNU General Public License
 // along with mosquito.  If not, see <http://www.gnu.org/licenses/>.
 
-#include <iostream>
-#include "client.hpp"
+#pragma once
 
-int main()
+#include <mosquittopp.h>
+
+class client: public mosqpp::mosquittopp
 {
-	client c;
+public:
+	virtual ~client();
 
-	c.loop_forever();
-
-	return 0;
-}
+	virtual void on_message(const struct mosquitto_message *) override;
+};

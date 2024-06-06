@@ -15,13 +15,14 @@
 // along with mosquito.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <iostream>
+
 #include "client.hpp"
 
-int main()
+client::~client()
 {
-	client c;
+}
 
-	c.loop_forever();
-
-	return 0;
+void client::on_message(const struct mosquitto_message *)
+{
+	std::cout << "Hello world\n";
 }
