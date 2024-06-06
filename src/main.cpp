@@ -15,16 +15,13 @@
 // along with mosquito.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <iostream>
-
-//https://hannes.hauswedell.net/post/2017/12/09/fmv/
-[[gnu::target_clones("default,arch=x86-64-v4")]]
-void f()
-{
-	std::cout << "Hello\n";
-}
+#include <mosquittopp.h>
 
 int main()
 {
-	f();
+	mosqpp::mosquittopp mq;
+
+	mq.connect("1.2.3.4");
+
 	return 0;
 }
