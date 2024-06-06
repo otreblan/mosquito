@@ -1,25 +1,25 @@
-# {{ DESCRIPTION }}
-# Copyright © {{ YEAR }} {{ USER_NAME }}
+# MQTT test
+# Copyright © 2024 Alberto Oporto
 #
-# {{ NAME }} is free software: you can redistribute it and/or modify
+# mosquito is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# {{ NAME }} is distributed in the hope that it will be useful,
+# mosquito is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with {{ NAME }}.  If not, see <http://www.gnu.org/licenses/>.
+# along with mosquito.  If not, see <http://www.gnu.org/licenses/>.
 
 cmake_minimum_required(VERSION 3.13.0)
 
-project({{ NAME }}
-	VERSION {{ VERSION }}
-	DESCRIPTION "{{ DESCRIPTION }}"
-	HOMEPAGE_URL "{{ HOMEPAGE_URL }}"
+project(mosquito
+	VERSION 0.0.0
+	DESCRIPTION "MQTT test"
+	HOMEPAGE_URL "https://github.com/otreblan/mosquito"
 )
 
 # Default build type
@@ -44,7 +44,6 @@ set_target_properties(${PROJECT_NAME}
 find_package(bash-completion)
 
 add_subdirectory(src) # Sources list
-add_subdirectory(doc) # Documentation
 add_subdirectory(pkg) # Packaging
 
 ## Shared libraries

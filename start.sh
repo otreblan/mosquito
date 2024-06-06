@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2155
 
-NAME="hello"
-DESCRIPTION="A C++ template"
+NAME="mosquito"
+DESCRIPTION="MQTT test"
 VERSION="0.0.0"
 REPOSITORY="otreblan/$NAME"
 HOMEPAGE_URL="https://github.com/$REPOSITORY"
 YEAR="$(date +%Y)"
-USER_NAME="Otreblan"
-USER_EMAIL="otreblain@gmail.com"
+USER_NAME="Alberto Oporto"
+USER_EMAIL="alberto.oporto@utec.edu.pe"
 
 function esc() {
 	printf "%s" "$@" | sed -e 's/[\/&]/\\&/g'
