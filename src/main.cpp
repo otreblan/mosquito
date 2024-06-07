@@ -23,9 +23,11 @@ int main()
 
 	c.connect("localhost");
 
-	c.publish(nullptr, "Hello world");
+	std::string topic = "hello_world";
 
-	c.subscribe(nullptr, "Hello world");
+	c.publish(nullptr, topic.c_str());
+
+	c.subscribe(nullptr, topic.c_str());
 
 	c.loop_forever();
 
