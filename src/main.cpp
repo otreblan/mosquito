@@ -23,6 +23,8 @@ int main()
 
 	c.connect("localhost");
 
+	c.publish(nullptr, "Hello world");
+
 	c.subscribe(nullptr, "Hello world");
 
 	c.loop_forever();
