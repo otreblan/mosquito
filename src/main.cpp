@@ -21,6 +21,8 @@ int main()
 {
 	client c;
 
+	c.connect("localhost");
+
 	c.subscribe(nullptr, "Hello world");
 
 	c.loop_forever();
