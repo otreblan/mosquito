@@ -6,9 +6,9 @@
 
 ## Dependencies
 
-* `asciidoctor`
 * `bash-completion`
 * `cmake`
+* `libmosquittopp-dev`
 
 ## Build
 ``` bash

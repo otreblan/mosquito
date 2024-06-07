@@ -15,7 +15,7 @@ jobs:
     - uses: ammaraskar/gcc-problem-matcher@master
 
     - name: deps
-      run: sudo apt install libmosquitto-dev bash-completion
+      run: sudo apt install libmosquittopp-dev bash-completion
 
     - name: configure
       run: cmake -B build
