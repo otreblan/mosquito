@@ -23,11 +23,12 @@ int main()
 
 	c.connect("localhost");
 
-	std::string topic = "hello_world";
+	std::string topic = "/hello_world";
 
 	c.publish(nullptr, topic.c_str());
-
-	c.subscribe(nullptr, topic.c_str());
+	c.subscribe(nullptr, topic.c_str(), 0);
+	c.subscribe(nullptr, topic.c_str(), 1);
+	c.subscribe(nullptr, topic.c_str(), 2);
 
 	c.loop_forever();
 

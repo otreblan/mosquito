@@ -22,7 +22,7 @@ client::~client()
 {
 }
 
-void client::on_message(const struct mosquitto_message *)
+void client::on_message(const struct mosquitto_message* msg)
 {
-	std::cout << "Hello world\n";
+	std::cout << "Hello world. qos: " << msg->qos << '\n';
 }

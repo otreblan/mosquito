@@ -23,5 +23,5 @@ class client: public mosqpp::mosquittopp
 public:
 	virtual ~client();
 
-	virtual void on_message(const struct mosquitto_message *) override;
+	virtual void on_message(const struct mosquitto_message* msg) override;
 };
