@@ -23,7 +23,7 @@ int main()
 
 	c.connect("localhost");
 
-	std::string topic = "/hello_world";
+	std::string topic = "/uv_data";
 
 	c.publish(nullptr, topic.c_str());
 	c.subscribe(nullptr, topic.c_str(), 0);
